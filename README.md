@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/2Wy-Iis-)
 # Dijkstra's Algorithm
 
 Recall the pseudocode for Dijkstra's algorithm:
@@ -23,3 +24,5 @@ inefficient.
 
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+We iterate over all of the vertices with a for loop to set their distance's from the source node to Infinity, which takes number of vertices or |V| time. Then a while loop that has 2 for loops inside. The first for loop inside the while loop will iterate for |V| because it is searching for the distance to find the next smallest distance. Since this for loop is nested in the while loop, which also iterates for |V|, we get |V|^2. The last for loop inside the while loop is looking at all the edges of each node to see if there is a shorter path to undecided neighbor nodes. Since this implementation is an adjacency matrix, iterating over edges leads the second for loop inside the while loop to run for |V|^2. The if statement checks and variable initializations are constant time and can be dropped for the rest of the calculations. All this together we get: |V| + |V|^2 + |V|^2 which is equal to |V|+2|V|^2 which asytompically we simplify to just |V|^2. So the $\Theta$ is |V|^2

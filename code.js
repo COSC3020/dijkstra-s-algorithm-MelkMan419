@@ -1,3 +1,4 @@
+//used repl.it insight to help write these
 function dijkstra(graph, sourceNode) {
   let dist = [];
   let visitedNodes = [];
